@@ -21,7 +21,7 @@ void ajouterLivre() {
     livre livres;
 
     int result;
-    fseek(stdin,0,SEEK_END);
+while (getchar() != '\n');
 
 
     printf("Entrer le titre du livre: ");
@@ -143,7 +143,12 @@ else
     printf("************************************\n");
 }
 void afficherTotalLivres(){
-printf("le total des livres dans le stock est: %d",cmp);
+    int total=0;
+    for (int i=0;i<cmp;i++){
+        total+=l[i].quantite;
+    }
+    printf("le total des livres dans le stock est: %d",total);
+
 }
 void supprimerLivre() {
     char titre[100];
